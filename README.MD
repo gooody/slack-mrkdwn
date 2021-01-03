@@ -10,24 +10,24 @@ $ npm install slack-mrkdwn
 
 ```javascript
 // Using Node.js `require()`
-const SlackMrkdwnConverter = require('slack-mrkdwn').SlackMrkdwnConverter;
+const SlackMarkdownConverter = require('slack-mrkdwn').SlackMarkdownConverter;
 
 // Using ES6 imports
-import {SlackMrkdwnConverter} from 'slack-mrkdwn';
+import {SlackMarkdownConverter} from 'slack-mrkdwn';
 ```
 
 ## Usage
 ```js
-const SlackMrkdwnConverter = require('slack-mrkdwn').SlackMrkdwnConverter;
+const SlackMarkdownConverter = require('slack-mrkdwn').SlackMarkdownConverter;
 
 const text = 'hello world,\n' 
 +'long *long ~simple~ _random_* text\n'
 +'```\n'
 +'code\n'
 +'```\n'
-+'and \`e.t.c.\`\n';
++'and `e.t.c.`\n';
 
-const html = new SlackMrkdwnConverter(text).toHtml();
+const html = new SlackMarkdownConverter(text).toHtml();
 console.log(html)
 
 ```
