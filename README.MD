@@ -20,14 +20,12 @@ import {SlackMrkdwnConverter} from 'slack-mrkdwn';
 ```js
 const SlackMrkdwnConverter = require('slack-mrkdwn').SlackMrkdwnConverter;
 
-const text = `
-hello world, 
-long *long ~simple~ _random_* text
-\`\`\`
-code
-\`\`\`
-and \`e.t.c.\`
-`;
+const text = 'hello world,\n' 
++'long *long ~simple~ _random_* text\n'
++'```\n'
++'code\n'
++'```\n'
++'and \`e.t.c.\`\n';
 
 const html = new SlackMrkdwnConverter(text).toHtml();
 console.log(html)
