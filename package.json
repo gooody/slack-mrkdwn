@@ -1,5 +1,5 @@
 {
-  "name": "slack-markdown",
+  "name": "slack-mrkdwn",
   "version": "0.1.0-betta",
   "description": "",
   "type": "module",
