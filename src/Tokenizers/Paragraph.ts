@@ -15,9 +15,9 @@ export default class Paragraph extends AbstractTokenizer
     /**
      * Prepare current substrings
      */
-    prepare(){
-        this.raw = this.capture[0];
-        this.content = this.capture[0].replace(/\n$/g, '');
+    prepare(text){
+        this.raw = text ? text : this.capture[0];
+        this.content = (text ? text : this.capture[0]).replace(/\n$/g, '');
         this.tokens = this.parseInlineTokens(this.content);
     };
 

@@ -128,7 +128,7 @@ export default abstract class AbstractTokenizer
     /**
      * Prepare current substrings
      */
-    public abstract prepare();
+    public abstract prepare(text:string|undefined);
 
     /**
      * Rendering html elements

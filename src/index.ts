@@ -30,6 +30,7 @@ export class SlackMarkdownConverter
             .replace(/```(^\n)/gm, "```\n");
 
         while (src) {
+            let itSrc = src;
             for (let i in Tokenizers) {
                 let tokenizer = Tokenizers[i];
                 let _tokenizer = new tokenizer(src, this._lastToken);
@@ -41,6 +42,13 @@ export class SlackMarkdownConverter
                     src = _tokenizer.getNextSubstring();
                     break;
                 }
+            }
+
+            if(itSrc === src) {
+                let _tokenizer = new Tokenizers.Paragraph(src, this._lastToken)
+                _tokenizer.prepare(src)
+                this._tokens.push(_tokenizer);
+                src = _tokenizer.getNextSubstring();
             }
         }
     }
