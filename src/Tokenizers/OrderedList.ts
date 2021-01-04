@@ -26,7 +26,7 @@ export default class OrderedList extends AbstractTokenizer
      * Rendering html elements
      */
     toHtml(){
-        let itemsHtmls = this.itemsToHtml().map(item => `<li>${item}</li>`);
+        let itemsHtmls = this.itemsToHtml().map(item => item?`<li class="slack-block-ordered-list-item">${item}</li>`:'');
         return `<ol class="slack-block-ordered-list">${ itemsHtmls.join('') }</ol>`;
     };
 }
