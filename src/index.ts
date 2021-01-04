@@ -54,15 +54,28 @@ export class SlackMarkdownConverter
     }
 
     /**
-     * Render html elements into a shared container(div) with a class 'slack-markdown'
+     * Render html elements
      */
-    toHtml():string{
+    private _toHtml():string{
         let htmls = [];
         for (let i in this._tokens) {
             let token = this._tokens[i];
             htmls.push(token.toHtml());
         }
-        return `<div class="slack-markdown">${htmls.join('')}</div>`;
+        return htmls.join('');
+    }
+    /**
+     * Render html elements into a shared container(div) with a class 'slack-markdown'
+     */
+    toHtml():string{
+        return `<div class="slack-markdown">${this._toHtml()}</div>`;
+    }
+
+    /**
+     * Render html elements w/o shared container
+     */
+    innerHtml():string{
+        return this._toHtml();
     }
 }
 
