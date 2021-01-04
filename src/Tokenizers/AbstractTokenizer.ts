@@ -80,10 +80,12 @@ export default abstract class AbstractTokenizer
         let results = [];
         for (let i in items) {
             let item = items[i];
+            let resultTkns = [];
             for (let ii in item.tokens) {
                 let token = item.tokens[ii];
-                results.push(token.toHtml());
+                resultTkns.push(token.toHtml());
             }
+            results.push(resultTkns.join(''));
         }
         return results;
     };

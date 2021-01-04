@@ -1,6 +1,6 @@
 {
   "name": "slack-mrkdwn",
-  "version": "0.1.5-betta",
+  "version": "0.1.6-betta",
   "description": "",
   "type": "module",
   "main": "./lib/index.js",
