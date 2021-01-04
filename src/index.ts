@@ -28,6 +28,7 @@ export class SlackMarkdownConverter
             .replace(/(?<!\n)```(^\n)/gm, "\n```\n")
             .replace(/(?<!\n)```/gm, "\n```")
             .replace(/```(^\n)/gm, "```\n");
+        src = `${src}\n`;
 
         while (src) {
             let itSrc = src;
