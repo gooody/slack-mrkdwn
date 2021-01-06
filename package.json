@@ -1,11 +1,12 @@
 {
   "name": "slack-mrkdwn",
-  "version": "0.1.7-betta",
+  "version": "0.1.9-betta",
   "description": "",
   "type": "module",
   "main": "./lib/index.js",
   "scripts": {
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "pub": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",

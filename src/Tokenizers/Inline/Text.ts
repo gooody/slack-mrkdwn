@@ -23,8 +23,12 @@ export default class Text extends AbstractInlineTokenizer
      * Rendering html elements
      */
     _toHtml():string {
-        if ('' === this._content.replace(/\s/g, '')) {
-            return '';
+        const trimmed = this._content.replace(/\s+/g, ' ');
+        if ('' === trimmed) {
+            return ``;
+        }
+        if (' ' === trimmed) {
+            return `<span class="slack-inline-space"> </span>`;
         }
         return `<span class="slack-inline-text">${ this._content }</span>`;
     }
