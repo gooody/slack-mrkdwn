@@ -8,6 +8,8 @@ export default class Emoji extends AbstractInlineTokenizer
      */
     static searchQuery = '(?<Emoji>:[a-zA-Z0-9+_-]+:)';
 
+    private _code = '';
+
     constructor(textSrc:string) {
         super(textSrc);
     };
@@ -16,7 +18,8 @@ export default class Emoji extends AbstractInlineTokenizer
      * Сleaning substring from formatting service characters
      */
     clearContent(){
-        this._content = this._raw.replace( /^:|:$/g, '');
+        this._code = this._raw.replace( /^:|:$/g, '');
+        this._content = '';
         return this._content;
     };
 
@@ -24,6 +27,6 @@ export default class Emoji extends AbstractInlineTokenizer
      * Rendering html elements
      */
     _toHtml():string {
-        return `<span class="slack-block-smile" smile="${this._content}"></span>`;
+        return `<span class="slack-block-smile" contenteditable="false" smile="${this._code}"></span>`;
     }
 }
