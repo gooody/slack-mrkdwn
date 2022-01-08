@@ -1,8 +1,7 @@
 {
   "name": "slack-mrkdwn",
-  "version": "0.1.9-betta",
+  "version": "0.1.10-beta",
   "description": "",
-  "type": "module",
   "main": "./lib/index.js",
   "scripts": {
     "build": "tsc --build",
@@ -10,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gooody/slack-mrkdwn.git"
+    "url": "git+https://github.com/KimHwon/slack-mrkdwn.git"
   },
   "author": "Nicholas Kravchenko",
   "license": "MIT",
@@ -22,9 +21,9 @@
     "converter"
   ],
   "bugs": {
-    "url": "https://github.com/gooody/slack-mrkdwn/issues"
+    "url": "https://github.com/KimHwon/slack-mrkdwn/issues"
   },
-  "homepage": "https://github.com/gooody/slack-mrkdwn#readme",
+  "homepage": "https://github.com/KimHwon/slack-mrkdwn#readme",
   "devDependencies": {
     "typescript": "^4.1.2"
   },
