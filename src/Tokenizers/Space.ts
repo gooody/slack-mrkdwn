@@ -24,6 +24,6 @@ export default class Space extends AbstractTokenizer
      * Rendering html elements
      */
     toHtml(){
-        return this.content.replace(/\n/g, "<br />");
+        return this.content.replace(/\n/g, `<span class="slack-linebreak"><br></span>`);
     };
 }

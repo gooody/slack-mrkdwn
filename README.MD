@@ -1,7 +1,7 @@
 
 Convert Slack's mrkdwn format to HTML.
 
-##Installation
+## Installation
 ```sh
 $ npm install slack-mrkdwn
 ```
@@ -105,4 +105,6 @@ code
 - `.slack-markdown code.slack-inline-code`
 - `.slack-markdown .slack-inline-bold`
 - `.slack-markdown strong.slack-inline-bold`
+- `.slack-markdown .slack-linebreak`
+- `.slack-markdown br.slack-linebreak`
 
